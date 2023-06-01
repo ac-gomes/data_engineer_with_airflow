@@ -3,10 +3,6 @@ from pydantic import BaseModel
 from database.api_connection import API_HOST, API_KEY
 
 
-def pirnt_api_conn():
-    print(request_config)
-
-
 class RequestConfig(BaseModel):
     querystring: dict
     headers: dict
@@ -16,11 +12,6 @@ class RequestConfig(BaseModel):
     dateFormat: dict
     request_type: dict
 
-
-request_type = {
-    "scores": "scores",
-    "sports": "sports"
-}
 
 request_config = RequestConfig(
     querystring={
@@ -53,9 +44,3 @@ request_config = RequestConfig(
         "sports": "sports"
     }
 )
-
-
-def config_test():
-    print(request_config.sport.get("soccer_brazil_campeonato"))
-    print(request_config.request_type.get("scores"))
-    print(request_config.request_type.get("sports"))

@@ -1,8 +1,8 @@
-from pydantic import BaseModel
-from typing import Dict, Any
-
 import requests
 import json
+
+from pydantic import BaseModel
+from typing import Dict, Any
 
 from database.api_connection import api_conn
 from config.odds_api import request_config
@@ -21,24 +21,36 @@ class GetAPIData():
         self.request_type = request_type
         self._request_config = request_config
         self._api_conn = api_conn
-        self.default = request_config.sport.get("soccer_brazil_campeonato")
+        self.default_sport = request_config.sport.get(
+            "soccer_brazil_campeonato")
+        self.default_request = request_config.request_type.get("sports")
 
     def data_request(self) -> ResponseData:
+
         try:
-            if not self._request_config.sport.get(self.default):
+            if not self.request_type == self.default_request:
                 response = self._get_scores(request_type=self.request_type)
+
+                response_headers = dict(response.headers)
+                json_string = json.dumps(response.json())
+                response_data = json.loads(json_string)
+
+                score_parser = Utils()
+                data_score = score_parser.score_parser(response_data)
+
+                return ResponseData(data=data_score, response_headers=response_headers)
+
             else:
-                response = self._get_sport(request_type=self.request_type)
+                response = self._get_sport()
 
-            json_string = json.dumps(response.json())
-            response_data = json.loads(json_string)
+                response_headers = dict(response.headers)
+                json_string = json.dumps(response.json())
+                response_data = json.loads(json_string)
 
-            response_parser = Utils(response_data)
-            data = response_parser.sport_parser()
+                sport_parser = Utils()
+                data_sport = sport_parser.sport_parser(response_data)
 
-            response_headers = dict(response.headers)
-
-            return ResponseData(data=data, response_headers=response_headers)
+                return ResponseData(data=data_sport, response_headers=response_headers)
 
         except Exception as Error:
             print(f"Something went wrong! Error: {Error}")
@@ -47,7 +59,7 @@ class GetAPIData():
 
         try:
             response = requests.get(
-                self._api_conn.API_URL,
+                f'{self._api_conn.API_URL}/{self.default_sport}/{request_type}',
                 headers=self._request_config.headers,
                 params=self._request_config.querystring.get(3)
             )
@@ -57,7 +69,7 @@ class GetAPIData():
         except Exception as Error:
             print(f"Something went wrong! Error: {Error}")
 
-    def _get_sport(self, request_type):
+    def _get_sport(self):
 
         try:
             response = requests.get(
@@ -70,13 +82,3 @@ class GetAPIData():
 
         except Exception as Error:
             print(f"Something went wrong! Error: {Error}")
-
-
-# 'https://odds.p.rapidapi.com/v4/sports/upcoming/odds',
-
-# 'https://odds.p.rapidapi.com/v4/sports/americanfootball_nfl/scores',
-
-
-# Response Headers
-# x-requests-remaining   The number of requests remaining until the quota resets
-# x-requests-used   The number of requests used since the last quota reset
