@@ -3,9 +3,10 @@ __pycache__
 .vscode
 venv
 .env
-libs.txt
 start.py
 test_apy.py
 db-data
 env
 db.py
+tree.txt
+requirements.txt

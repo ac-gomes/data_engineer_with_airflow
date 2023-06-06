@@ -23,7 +23,7 @@ class ScoresDict(BaseModel):
     completed: str
     home_team: str
     away_team: str
-    scores: str
+    scores: Any
     last_update: str
 
 
@@ -64,8 +64,10 @@ class Utils():
                     completed=item.get('completed'),
                     home_team=item.get('home_team'),
                     away_team=item.get('away_team'),
-                    scores=item.get('scores') or 0,
-                    last_update=item.get('last_update') or 0
+                    scores=item.get('scores') if item.get(
+                        'scores') is not None else 'null',
+                    last_update=item.get('last_update') if item.get(
+                        'scores') is not None else 'null'
                 ).json(ensure_ascii=False)
                 self.data_dict[int(count)] = score
 

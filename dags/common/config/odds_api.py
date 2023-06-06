@@ -1,6 +1,7 @@
 
 from pydantic import BaseModel
-from database.api_connection import API_HOST, API_KEY
+# from database.api_connection import API_HOST, API_KEY
+from sports.database.api_connection import API_HOST, API_KEY
 
 
 class RequestConfig(BaseModel):

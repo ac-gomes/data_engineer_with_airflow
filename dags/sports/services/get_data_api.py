@@ -4,9 +4,9 @@ import json
 from pydantic import BaseModel
 from typing import Dict, Any
 
-from database.api_connection import api_conn
-from config.odds_api import request_config
-from utils.utils import Utils
+from sports.database.api_connection import api_conn
+from common.config.odds_api import request_config
+from common.scripts.utils import Utils
 
 
 class ResponseData(BaseModel):
