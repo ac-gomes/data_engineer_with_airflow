@@ -8231,3 +8231,115 @@ NameError: name 'first_test' is not defined
 [2023-06-06T20:22:27.855+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:22:27.855+0000] {dag.py:2726} INFO - Sync 1 DAGs
 [2023-06-06T20:22:27.882+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:22:27.882+0000] {dag.py:3490} INFO - Setting next_dagrun for GetAPIdata_v01.02 to 2023-06-06T20:14:24.772128+00:00, run_after=2023-06-06T20:44:24.772128+00:00
 [2023-06-06T20:22:27.904+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/sports/dag_test.py took 0.101 seconds
+[2023-06-06T20:22:58.094+0000] {processor.py:157} INFO - Started process (PID=9986) to work on /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:22:58.095+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/sports/dag_test.py for tasks to queue
+[2023-06-06T20:22:58.096+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:22:58.096+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:22:58.116+0000] {processor.py:836} INFO - DAG(s) dict_keys(['GetAPIdata_v01.02']) retrieved from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:22:58.142+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:22:58.142+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-06T20:22:58.169+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:22:58.169+0000] {dag.py:3490} INFO - Setting next_dagrun for GetAPIdata_v01.02 to 2023-06-06T20:14:24.772128+00:00, run_after=2023-06-06T20:44:24.772128+00:00
+[2023-06-06T20:22:58.192+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/sports/dag_test.py took 0.102 seconds
+[2023-06-06T20:23:28.338+0000] {processor.py:157} INFO - Started process (PID=9998) to work on /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:23:28.340+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/sports/dag_test.py for tasks to queue
+[2023-06-06T20:23:28.342+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:23:28.342+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:23:28.422+0000] {processor.py:836} INFO - DAG(s) dict_keys(['GetAPIdata_v01.02']) retrieved from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:23:28.484+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:23:28.484+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-06T20:23:28.569+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:23:28.569+0000] {dag.py:3490} INFO - Setting next_dagrun for GetAPIdata_v01.02 to 2023-06-06T20:14:24.772128+00:00, run_after=2023-06-06T20:44:24.772128+00:00
+[2023-06-06T20:23:28.616+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/sports/dag_test.py took 0.286 seconds
+[2023-06-06T20:23:58.848+0000] {processor.py:157} INFO - Started process (PID=10010) to work on /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:23:58.849+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/sports/dag_test.py for tasks to queue
+[2023-06-06T20:23:58.850+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:23:58.850+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:23:58.870+0000] {processor.py:836} INFO - DAG(s) dict_keys(['GetAPIdata_v01.02']) retrieved from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:23:58.897+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:23:58.897+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-06T20:23:58.925+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:23:58.925+0000] {dag.py:3490} INFO - Setting next_dagrun for GetAPIdata_v01.02 to 2023-06-06T20:14:24.772128+00:00, run_after=2023-06-06T20:44:24.772128+00:00
+[2023-06-06T20:23:58.947+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/sports/dag_test.py took 0.103 seconds
+[2023-06-06T20:24:29.108+0000] {processor.py:157} INFO - Started process (PID=10022) to work on /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:24:29.115+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/sports/dag_test.py for tasks to queue
+[2023-06-06T20:24:29.116+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:24:29.116+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:24:29.140+0000] {processor.py:836} INFO - DAG(s) dict_keys(['GetAPIdata_v01.02']) retrieved from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:24:29.167+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:24:29.167+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-06T20:24:29.197+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:24:29.197+0000] {dag.py:3490} INFO - Setting next_dagrun for GetAPIdata_v01.02 to 2023-06-06T20:14:24.772128+00:00, run_after=2023-06-06T20:44:24.772128+00:00
+[2023-06-06T20:24:29.219+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/sports/dag_test.py took 0.118 seconds
+[2023-06-06T20:24:59.352+0000] {processor.py:157} INFO - Started process (PID=10034) to work on /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:24:59.353+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/sports/dag_test.py for tasks to queue
+[2023-06-06T20:24:59.355+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:24:59.355+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:24:59.380+0000] {processor.py:836} INFO - DAG(s) dict_keys(['GetAPIdata_v01.02']) retrieved from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:24:59.415+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:24:59.415+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-06T20:24:59.451+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:24:59.451+0000] {dag.py:3490} INFO - Setting next_dagrun for GetAPIdata_v01.02 to 2023-06-06T20:14:24.772128+00:00, run_after=2023-06-06T20:44:24.772128+00:00
+[2023-06-06T20:24:59.480+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/sports/dag_test.py took 0.132 seconds
+[2023-06-06T20:25:29.612+0000] {processor.py:157} INFO - Started process (PID=10046) to work on /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:25:29.613+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/sports/dag_test.py for tasks to queue
+[2023-06-06T20:25:29.613+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:25:29.613+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:25:29.633+0000] {processor.py:836} INFO - DAG(s) dict_keys(['GetAPIdata_v01.02']) retrieved from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:25:29.660+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:25:29.660+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-06T20:25:29.687+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:25:29.687+0000] {dag.py:3490} INFO - Setting next_dagrun for GetAPIdata_v01.02 to 2023-06-06T20:14:24.772128+00:00, run_after=2023-06-06T20:44:24.772128+00:00
+[2023-06-06T20:25:29.709+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/sports/dag_test.py took 0.100 seconds
+[2023-06-06T20:25:59.961+0000] {processor.py:157} INFO - Started process (PID=10058) to work on /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:25:59.962+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/sports/dag_test.py for tasks to queue
+[2023-06-06T20:25:59.963+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:25:59.962+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:25:59.982+0000] {processor.py:836} INFO - DAG(s) dict_keys(['GetAPIdata_v01.02']) retrieved from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:26:00.008+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:26:00.008+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-06T20:26:00.040+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:26:00.040+0000] {dag.py:3490} INFO - Setting next_dagrun for GetAPIdata_v01.02 to 2023-06-06T20:14:24.772128+00:00, run_after=2023-06-06T20:44:24.772128+00:00
+[2023-06-06T20:26:00.063+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/sports/dag_test.py took 0.105 seconds
+[2023-06-06T20:26:30.163+0000] {processor.py:157} INFO - Started process (PID=10070) to work on /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:26:30.166+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/sports/dag_test.py for tasks to queue
+[2023-06-06T20:26:30.168+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:26:30.167+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:26:30.210+0000] {processor.py:836} INFO - DAG(s) dict_keys(['GetAPIdata_v01.02']) retrieved from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:26:30.266+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:26:30.265+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-06T20:26:30.350+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:26:30.349+0000] {dag.py:3490} INFO - Setting next_dagrun for GetAPIdata_v01.02 to 2023-06-06T20:14:24.772128+00:00, run_after=2023-06-06T20:44:24.772128+00:00
+[2023-06-06T20:26:30.405+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/sports/dag_test.py took 0.250 seconds
+[2023-06-06T20:27:00.518+0000] {processor.py:157} INFO - Started process (PID=10082) to work on /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:27:00.519+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/sports/dag_test.py for tasks to queue
+[2023-06-06T20:27:00.519+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:27:00.519+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:27:00.541+0000] {processor.py:836} INFO - DAG(s) dict_keys(['GetAPIdata_v01.02']) retrieved from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:27:00.568+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:27:00.568+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-06T20:27:00.596+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:27:00.596+0000] {dag.py:3490} INFO - Setting next_dagrun for GetAPIdata_v01.02 to 2023-06-06T20:14:24.772128+00:00, run_after=2023-06-06T20:44:24.772128+00:00
+[2023-06-06T20:27:00.617+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/sports/dag_test.py took 0.103 seconds
+[2023-06-06T20:27:30.721+0000] {processor.py:157} INFO - Started process (PID=10094) to work on /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:27:30.722+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/sports/dag_test.py for tasks to queue
+[2023-06-06T20:27:30.723+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:27:30.723+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:27:30.742+0000] {processor.py:836} INFO - DAG(s) dict_keys(['GetAPIdata_v01.02']) retrieved from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:27:30.770+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:27:30.770+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-06T20:27:30.797+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:27:30.796+0000] {dag.py:3490} INFO - Setting next_dagrun for GetAPIdata_v01.02 to 2023-06-06T20:14:24.772128+00:00, run_after=2023-06-06T20:44:24.772128+00:00
+[2023-06-06T20:27:30.817+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/sports/dag_test.py took 0.099 seconds
+[2023-06-06T20:28:01.059+0000] {processor.py:157} INFO - Started process (PID=10106) to work on /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:28:01.066+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/sports/dag_test.py for tasks to queue
+[2023-06-06T20:28:01.067+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:28:01.067+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:28:01.086+0000] {processor.py:836} INFO - DAG(s) dict_keys(['GetAPIdata_v01.02']) retrieved from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:28:01.112+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:28:01.112+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-06T20:28:01.139+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:28:01.139+0000] {dag.py:3490} INFO - Setting next_dagrun for GetAPIdata_v01.02 to 2023-06-06T20:14:24.772128+00:00, run_after=2023-06-06T20:44:24.772128+00:00
+[2023-06-06T20:28:01.160+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/sports/dag_test.py took 0.104 seconds
+[2023-06-06T20:28:31.306+0000] {processor.py:157} INFO - Started process (PID=10118) to work on /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:28:31.313+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/sports/dag_test.py for tasks to queue
+[2023-06-06T20:28:31.314+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:28:31.313+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:28:31.334+0000] {processor.py:836} INFO - DAG(s) dict_keys(['GetAPIdata_v01.02']) retrieved from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:28:31.360+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:28:31.359+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-06T20:28:31.388+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:28:31.387+0000] {dag.py:3490} INFO - Setting next_dagrun for GetAPIdata_v01.02 to 2023-06-06T20:14:24.772128+00:00, run_after=2023-06-06T20:44:24.772128+00:00
+[2023-06-06T20:28:31.408+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/sports/dag_test.py took 0.105 seconds
+[2023-06-06T20:29:01.543+0000] {processor.py:157} INFO - Started process (PID=10130) to work on /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:29:01.550+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/sports/dag_test.py for tasks to queue
+[2023-06-06T20:29:01.551+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:29:01.551+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:29:01.573+0000] {processor.py:836} INFO - DAG(s) dict_keys(['GetAPIdata_v01.02']) retrieved from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:29:01.600+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:29:01.600+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-06T20:29:01.629+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:29:01.628+0000] {dag.py:3490} INFO - Setting next_dagrun for GetAPIdata_v01.02 to 2023-06-06T20:14:24.772128+00:00, run_after=2023-06-06T20:44:24.772128+00:00
+[2023-06-06T20:29:01.652+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/sports/dag_test.py took 0.113 seconds
+[2023-06-06T20:29:31.796+0000] {processor.py:157} INFO - Started process (PID=10142) to work on /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:29:31.798+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/sports/dag_test.py for tasks to queue
+[2023-06-06T20:29:31.799+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:29:31.798+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:29:31.818+0000] {processor.py:836} INFO - DAG(s) dict_keys(['GetAPIdata_v01.02']) retrieved from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:29:31.844+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:29:31.844+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-06T20:29:31.873+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:29:31.872+0000] {dag.py:3490} INFO - Setting next_dagrun for GetAPIdata_v01.02 to 2023-06-06T20:14:24.772128+00:00, run_after=2023-06-06T20:44:24.772128+00:00
+[2023-06-06T20:29:31.894+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/sports/dag_test.py took 0.101 seconds
+[2023-06-06T20:30:02.135+0000] {processor.py:157} INFO - Started process (PID=10154) to work on /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:30:02.142+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/sports/dag_test.py for tasks to queue
+[2023-06-06T20:30:02.143+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:30:02.143+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:30:02.165+0000] {processor.py:836} INFO - DAG(s) dict_keys(['GetAPIdata_v01.02']) retrieved from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:30:02.191+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:30:02.191+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-06T20:30:02.222+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:30:02.222+0000] {dag.py:3490} INFO - Setting next_dagrun for GetAPIdata_v01.02 to 2023-06-06T20:14:24.772128+00:00, run_after=2023-06-06T20:44:24.772128+00:00
+[2023-06-06T20:30:02.249+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/sports/dag_test.py took 0.117 seconds
+[2023-06-06T20:30:32.360+0000] {processor.py:157} INFO - Started process (PID=10166) to work on /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:30:32.361+0000] {processor.py:826} INFO - Processing file /opt/airflow/dags/sports/dag_test.py for tasks to queue
+[2023-06-06T20:30:32.363+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:30:32.362+0000] {dagbag.py:541} INFO - Filling up the DagBag from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:30:32.398+0000] {processor.py:836} INFO - DAG(s) dict_keys(['GetAPIdata_v01.02']) retrieved from /opt/airflow/dags/sports/dag_test.py
+[2023-06-06T20:30:32.450+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:30:32.450+0000] {dag.py:2726} INFO - Sync 1 DAGs
+[2023-06-06T20:30:32.527+0000] {logging_mixin.py:149} INFO - [2023-06-06T20:30:32.527+0000] {dag.py:3490} INFO - Setting next_dagrun for GetAPIdata_v01.02 to 2023-06-06T20:14:24.772128+00:00, run_after=2023-06-06T20:44:24.772128+00:00
+[2023-06-06T20:30:32.562+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/sports/dag_test.py took 0.210 seconds

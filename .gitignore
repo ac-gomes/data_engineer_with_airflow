@@ -10,3 +10,5 @@ env
 db.py
 tree.txt
 requirements.txt
+logs
+data
