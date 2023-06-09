@@ -39,27 +39,29 @@ def scores():
 
 def load_to_azure_blob():
     upload_blob = AzureUploader()
-
-    upload_blob.upload_to_bob(
+    # try:
+    upload_blob.upload_to_azure_bob(
         blob_name='sports',
         file_name='data/sports.json',
-        container_name='raw',
-        azure_conn_id='adls-blob-only-key'
+        container_name='raw01',
+        azure_conn_id='adls-blob'
     )
+    # except Exception as err:
+    #     print(err)
 
 
 def load_to_azure_lake():
     upload_Adls = AzureUploader()
-
+    print('adsl')
     upload_Adls.upload_to_azure_datalake(
-        azure_data_lake_conn_id='adls-gen2-conn-string',
+        azure_data_lake_conn_id='adsl',
         local_path='data/sports.json',
-        remote_path='raw/sports/'
+        remote_path='/raws/sports/sports.json'
     )
 
 
 with DAG(
-    dag_id='GetAPIdata_v01.08',
+    dag_id='APIdata_azure_01.0',
     default_args=default_args,
     description='This will to get data from sports API',
     start_date=datetime(2023, 6, 6),
@@ -81,7 +83,7 @@ with DAG(
         task_id='load_sports_to_azure_lake',
         python_callable=load_to_azure_lake
     )
-    # get_scores = PythonOperator(
+    # # get_scores = PythonOperator(
     #     task_id='get_scores',
     #     python_callable=scores
     # )

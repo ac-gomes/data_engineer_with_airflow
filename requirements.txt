@@ -1,1 +1,2 @@
 apache-airflow-providers-microsoft-azure
+apache-airflow-providers-amazon
