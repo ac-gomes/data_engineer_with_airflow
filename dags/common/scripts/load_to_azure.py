@@ -5,14 +5,14 @@ from airflow.providers.microsoft.azure.hooks.data_lake import AzureDataLakeHook
 class AzureUploader():
     """ class has two methods to write files into azure storage """
 
-    def upload_to_azure_bob(blob_name, file_name, container_name, azure_conn_id) -> None:
+    def upload_to_azure_bob(file_name, container_name, blob_name) -> None:
 
-        Wasb_Hook = WasbHook(wasb_conn_id=azure_conn_id)
+        Wasb_Hook = WasbHook(wasb_conn_id='az-blob-conn')
 
         Wasb_Hook.load_file(
             file_path=file_name,
             container_name=container_name,
-            blob_name=f'{blob_name}/my_file.json',
+            blob_name=blob_name,
             overwrite=True,
 
         )

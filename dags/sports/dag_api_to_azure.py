@@ -1,14 +1,12 @@
 from datetime import datetime, timedelta
-import pathlib
-import json
 
 from airflow import DAG
 from airflow.operators.python import PythonOperator
-# from airflow.providers.http.sensors.http import HttpSensor
-
+from airflow.providers.microsoft.azure.hooks.wasb import WasbHook
+from airflow.operators.empty import EmptyOperator
 
 from sports.services.get_data_api import GetAPIData
-from common.scripts.load_to_azure import AzureUploader
+from common.scripts.file_manager import write_json_file, remove_temp_file
 
 
 default_args = {
@@ -18,50 +16,31 @@ default_args = {
 }
 
 
-def sports():
-    TEMP_FILE_PATH: pathlib.Path = 'data/sports.json'
-
+def sports(local_path, file_name):
     retrive_sports = GetAPIData('sports')
     response = retrive_sports.data_request()
-
-    print(response)
-    with open(TEMP_FILE_PATH, "w+") as f:
-        sports_data = json.loads(response.json())
-
-        f.write(json.dumps(sports_data, ensure_ascii=False))
+    write_json_file(response, local_path, file_name)
 
 
-def scores():
+def scores(local_path, file_name):
     retrive_scores = GetAPIData('scores')
     response = retrive_scores.data_request()
-    print(response)
+    write_json_file(response, local_path, file_name)
 
 
-def load_to_azure_blob():
-    upload_blob = AzureUploader()
-    # try:
-    upload_blob.upload_to_azure_bob(
-        blob_name='sports',
-        file_name='data/sports.json',
-        container_name='raw01',
-        azure_conn_id='adls-blob'
-    )
-    # except Exception as err:
-    #     print(err)
+def load_to_azure_blob(file_name, container_name, blob_name):
+    Wasb_Hook = WasbHook(wasb_conn_id='az-blob-conn')
 
-
-def load_to_azure_lake():
-    upload_Adls = AzureUploader()
-    print('adsl')
-    upload_Adls.upload_to_azure_datalake(
-        azure_data_lake_conn_id='adsl',
-        local_path='data/sports.json',
-        remote_path='/raws/sports/sports.json'
+    Wasb_Hook.load_file(
+        file_path=file_name,
+        container_name=container_name,
+        blob_name=blob_name,
+        overwrite=True,
     )
 
 
 with DAG(
-    dag_id='APIdata_azure_01.0',
+    dag_id='APIdata_azure_01.5',
     default_args=default_args,
     description='This will to get data from sports API',
     start_date=datetime(2023, 6, 6),
@@ -69,23 +48,55 @@ with DAG(
     catchup=False,
     tags=['apitoazure', 'azure']
 ) as dag:
-    # get_sports = PythonOperator(
-    #     task_id='get_sports',
-    #     python_callable=sports
-    # )
-
-    # load_azure = PythonOperator(
-    #     task_id='load_sports_to_azure',
-    #     python_callable=load_to_azure_blob
-    # )
-
-    load_azure_lake = PythonOperator(
-        task_id='load_sports_to_azure_lake',
-        python_callable=load_to_azure_lake
+    Start = EmptyOperator(
+        task_id='Start'
     )
-    # # get_scores = PythonOperator(
-    #     task_id='get_scores',
-    #     python_callable=scores
-    # )
 
-load_azure_lake
+    get_sports = PythonOperator(
+        task_id='get_sports',
+        python_callable=sports,
+        op_kwargs={
+            'local_path': 'data',
+            'file_name': 'sports.json'
+        }
+    )
+
+    get_scores = PythonOperator(
+        task_id='get_scores',
+        python_callable=scores,
+        op_kwargs={
+            'local_path': 'data',
+            'file_name': 'scores.json'
+        }
+    )
+
+    load_sports_to_azure_lake = PythonOperator(
+        task_id='load_sports_to_azure_lake',
+        python_callable=load_to_azure_blob,
+        op_kwargs={
+            'file_name': 'data/sports.json',
+            'blob_name': 'sports/sports.json',
+            'container_name': 'raw',
+        }
+    )
+
+    load_scores_to_azure_lake = PythonOperator(
+        task_id='load_scores_to_azure_lake',
+        python_callable=load_to_azure_blob,
+        op_kwargs={
+            'file_name': 'data/sports.json',
+            'blob_name': 'scores/scores.json',
+            'container_name': 'raw',
+        }
+    )
+
+    Clear_tmp_files = PythonOperator(
+        task_id='Clear_tmp_files',
+        python_callable=remove_temp_file
+    )
+
+    End = EmptyOperator(
+        task_id='End'
+    )
+Start >> get_sports >> get_scores >> [
+    load_sports_to_azure_lake, load_scores_to_azure_lake] >> Clear_tmp_files >> End
