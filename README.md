@@ -4,8 +4,6 @@
 ```sql
 .
 ├── Dockerfile
-├── LICENSE
-├── README.md
 ├── config
 ├── dags
 │   ├── common
@@ -33,7 +31,6 @@
 │           ├── get_data_api.py
 │           └── get_data_db.py
 ├── data
-├── db.py
 ├── docker-compose.yaml
 ├── plugins
 ├── requirements.txt
