@@ -7,14 +7,20 @@ Basicamente desenvolvi um ambiente onde as tarefas solicitadas no teste ganham u
 Este ambiente é meramente ilustrativo e visa facilitar o entendimento do contexto e dia-a-dia de um ambiente de produção. Neste projeto  realizei apenas a demontração das tepas **E** (Extract) e **L** (Eload) de uma pespectiva onde os dados precisam ser extraidos de suas fontes e depositados em um data lake, mais especificamente na camada **Raw** ou **Landing**, as nomeclaturas vão depender de qual arquitetura de dados cada empresa usa. *(Caso tenha interesse em ver as tranformações que deve ser realizadas vá ao repositório original do projeto **[tarefas-engenharia-de-dados](https://github.com/GleisonR/tarefas-engenharia-de-dados)**)*
 
 > **Note:**
-> Este projeto não se trata da estruturação de um data lake ou de como uma arquitetura deve ser estrutura, ele visa somente materializar um conceito da forma mais simples possivel.
+> Este projeto não se trata da estruturação de um data lake ou de como uma arquitetura deve ser estruturada, ele visa somente materializar um conceito da forma mais simples possivel.
 
-## Porque Airflow?`
+## Acesso aos dados da API
 
-```sh
-## De longe é um dos mais acessiveis para praticar E.D com python e montar um ambiente de treinamento.
-```
+- Para usar as dags da API é preciso se resgistar primeir e obter a chave
+- depois de obter sua chave coloque neste campo API_KEY=sua_chave_aqui do arquivo .env
+- site da API: https://rapidapi.com/theoddsapi/api/live-sports-odds
+- obs: todas as passwords no arquivo .env_template são Dummy. Nunca exponha seu .env
 
+
+
+## Porque Airflow para esse teste?
+
+- De longe é um dos mais acessiveis para praticar E.D com python e montar um ambiente de treinamento.
 
 ## Comu usar
 
@@ -45,7 +51,7 @@ cd data_engineer_with_airflow
 - Crie as pastas do Airflow
 
 ```sh
-mkdir -p ./dags ./logs ./plugins ./config
+mkdir -p ./dags ./logs ./plugins ./config ./data
 ```
 
 - Extraia o user id do Airflow para o arquivo de variavel de ambiente (.env)
