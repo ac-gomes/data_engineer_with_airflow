@@ -3,7 +3,7 @@ from db_connection import source_engine
 
 
 def create_source_database():
-    """ Delete and recreate tables from source """
+    """ Create source database"""
     try:
         if not database_exists(source_engine.url):
             create_database(source_engine.url)

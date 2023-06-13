@@ -1,14 +1,7 @@
 __pycache__
 .mypy_cache
 .vscode
-venv
 .env
-start.py
-test_apy.py
-db-data
 env
-db.py
-tree.txt
 requirements.txt
-logs
-data
+logs/

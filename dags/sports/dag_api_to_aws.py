@@ -18,7 +18,7 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 default_args = {
-    'owner': 'airflow',
+    'owner': 'Toni',
     'retries': 3,
     'retry': timedelta(minutes=5)
 }

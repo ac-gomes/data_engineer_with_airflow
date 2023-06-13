@@ -1,2 +1,6 @@
+python-dotenv
+SQLAlchemy-Utils
 apache-airflow-providers-microsoft-azure
 apache-airflow-providers-amazon
+apache-airflow-providers-postgres
+psycopg2
