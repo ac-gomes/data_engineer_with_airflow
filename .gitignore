@@ -3,5 +3,4 @@ __pycache__
 .vscode
 .env
 env
-requirements.txt
 logs/
