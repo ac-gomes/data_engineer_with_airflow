@@ -58,7 +58,7 @@ with DAG(
     default_args=default_args,
     description='This will to get data from sports API',
     start_date=datetime(2023, 6, 6),
-    schedule_interval=timedelta(minutes=30),
+    schedule_interval='0 0 * * *',
     catchup=False,
     tags=['apitos3', 'aws']
 ) as dag:

@@ -251,11 +251,11 @@ services:
           echo "   https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html#before-you-begin"
           echo
         fi
-        mkdir -p /sources/logs /sources/dags /sources/plugins /sources/dags/common/scripts /sources/dags/common/config  /sources/dags/sports/services /sources/dags/sports/database /sources/dags/sports/data
+        mkdir -p /sources/logs /sources/dags /sources/plugins /sources/dags/common/scripts /sources/dags/common/config  /sources/dags/sports/services /sources/dags/sports/database /sources/dags/sports/includes
         chown -R "${AIRFLOW_UID}:0" /sources/{logs,dags,plugins,data}
         chown -R "${AIRFLOW_UID}:0" /sources/dags/{common,sports}
         chown -R "${AIRFLOW_UID}:0" /sources/dags/common/{config,scripts}
-        chown -R "${AIRFLOW_UID}:0" /sources/dags/sports/{services,database,data}
+        chown -R "${AIRFLOW_UID}:0" /sources/dags/sports/{services,database,includes}
         exec /entrypoint airflow version
     # yamllint enable rule:line-length
     environment:

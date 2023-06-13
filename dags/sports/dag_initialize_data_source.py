@@ -20,7 +20,7 @@ def insert_into_table() -> None:
     with hook.get_conn() as conn:
         hook.copy_expert("""COPY src_db.public.players  FROM stdin WITH CSV HEADER
                         DELIMITER as ',' """,
-                         'dags/sports/data/db_data.csv')
+                         'dags/sports/includes/db_data.csv')
         conn.commit()
     logger.info("load data into src_db database!")
 
@@ -33,8 +33,9 @@ default_args = {
 
 
 with DAG(
-    dag_id='initialize_data_source_v01.8',
+    dag_id='initialize_data_source_v01.0',
     default_args=default_args,
+    description='Create source table and insert data into it',
     start_date=datetime(2023, 6, 12),
     schedule_interval='0 0 * * *',
     catchup=False,
@@ -63,9 +64,9 @@ with DAG(
         postgres_conn_id='postgres_conn',
         sql="""
         CREATE TABLE IF NOT EXISTS players (
-          ACCESS_DATETIME CHAR(50) NOT NULL,
-          CUSTOMER_ID CHAR(50) NOT NULL,
-          MODALITY CHAR(50),
+          ACCESS_DATETIME CHAR(25) NOT NULL,
+          CUSTOMER_ID CHAR(10) NOT NULL,
+          MODALITY CHAR(10),
           RAKE double precision NOT NULL
         )
         """

@@ -8,13 +8,9 @@ class AWSUploader():
     def upload_to_s3_bucket(filename, key, bucket_name) -> None:
         hook = S3Hook(aws_conn_id='s3_conn')
 
-        try:
-            hook.load_file(
-                filename=filename,
-                key=key,
-                bucket_name=bucket_name,
-                replace=True
-            )
-
-        except Exception as Error:
-            print(f"Something went wrong: {Error}")
+        hook.load_file(
+            filename=filename,
+            key=key,
+            bucket_name=bucket_name,
+            replace=True
+        )
