@@ -219,9 +219,9 @@ Client: Docker Engine - Community
 
 Arquivo yaml localizado na página oficial do airflow neste [link stable docker-compose](https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html)
 
-> **Note:**
+> **Note**
 >
-> Para mais detalhes sobre airflow consulte sempre a documentação oficial
+> Para mais detalhes sobre airflow consulte sempre a [documentação oficial](https://airflow.apache.org/docs/)
 >
 
 # Enjoy!
