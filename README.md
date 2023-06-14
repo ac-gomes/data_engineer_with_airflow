@@ -113,7 +113,7 @@ python3  dags/sports/database/init_database.py
 > **DISCLAIMER**
 > O banco de dados ``src_db`` será criado na instancia do Postgres usado como 'Meta Database'
 > pelo Airflow isso não é recomendado em nem uma circunstância em prd, dev, ou qa.
-> Neste ambiente foi feito isso para simpificar a ilistração e o ambiente onde foi feito o projeto
+> Neste ambiente foi feito isso para simpificar a ilustração e o ambiente onde foi feito o projeto
 > é o WSL2.
 
 ## Estrutura do Projeto
